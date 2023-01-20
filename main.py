@@ -273,7 +273,7 @@ def main():
           dino = game.dino
           loops = 0
        
-   clock.tick(80)
+   clock.tick(100)
    pygame.display.update()
 
 main()
