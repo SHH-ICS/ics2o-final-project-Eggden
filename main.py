@@ -83,6 +83,9 @@ class BG:
     self.y = 0
     self.self_texture()
     self.show()
+    pygame.mixer.init()
+    pygame.mixer.music.load('assets/Sounds/Bg.mp3')
+    pygame.mixer.music.play(-1, 0.0)
 
   def update(self, dx):
     self.x += dx
@@ -247,6 +250,7 @@ def main():
 
       #Collsion
       if game.collsion.between(dino, cactus):
+        pygame.mixer.music.stop()
         game.over()
 
       #Score
